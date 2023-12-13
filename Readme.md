@@ -1,6 +1,6 @@
 # Technology Blog made with Contentful CMS
 
-This is a task for school.
+This is a task for school. It is a (example) blog and it as a CI/CD pipeline with Github Actions.
 
 ## Building the website local
 
@@ -29,16 +29,3 @@ Contentfuloptions__SpaceId="<your space ID>"
 Contentfuloptions__UsePreviewApi=false
 Contentfuloptions__MaxNumberOfRateLimitRetries=0
 ```
-
-## TODO
-
-- Application
-
-  - Page with links to blog posts?
-  - [ ] Categories? / filter system => TAGS
-  - [ ] Search system? (MIGHT be hard, since none of the data is local. it's all in cms. Or just pure javascript on the rendered webpage, SEARCH QUERY IN CONTENTFUL?)
-
-- Other
-  - [x] Fix github actions
-  - [x] Docker stuff for auto deployments with actions
-  - !IMPORTNAT [ ] Don't leak API tokens!
