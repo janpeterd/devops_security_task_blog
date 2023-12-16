@@ -1,8 +1,10 @@
 ﻿@using Contentful.Core.Models
 @using System.Web
 
+@* use model in this view with this type (stronly typed, adds intellisense, etc)*@
 @model ContentfulCollection<Post>
 
+@* set the title (meta tag) of the page *@
 @{
     ViewData["Title"] = "Post overview";
 }
@@ -11,8 +13,10 @@
 <h1 id="index_title">Post overview</h1>
 <div id="overview_container">
     <div class="post_grid">
+        @* loop over all posts *@
         @foreach (var post in Model)
         {
+            @* make sure to url-encode the title *@
             <a href="/posts/@HttpUtility.UrlEncode(post.Title)">
                 <div class="card postlink glass">
                     @if (post.Image != null && post.Image.File != null)
