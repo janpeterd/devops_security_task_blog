@@ -2,6 +2,7 @@
 
 <div class="postviewer">
     <div class="post_content">
+        @* If the asked post exists show it, else show error *@
         @if (@Model.Title != null)
         {
             <h1>@Model.Title</h1>
@@ -15,16 +16,19 @@
     </div>
     <div class="post_sidecard">
         @* code sidecard with all posts *@
+        @* check if image exists *@
         @if (Model.Image != null && Model.Image.File != null)
         {
             <img class="post_sidecard_img" src="@Model.Image.File.Url" alt="@Model.Image.Description" class="post-banner" />
         }
         <h5 class="post_sidecard_title">Info</h5>
+        @* extra data like date created, updated, ... *@
         <ul>
             <li>Created at: <span id="post_create_date">@Model.Sys.CreatedAt</span></li>
             <li>Last updated at: <span id="post_update_date">@Model.Sys.UpdatedAt</span></li>
         </ul>
         <h5 class="post_sidecard_title">Posts</h5>
+        @* show index with links to all posts *@
         <ul>
             @foreach (var post in ViewBag.allPosts)
             {
