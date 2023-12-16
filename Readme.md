@@ -39,4 +39,3 @@ Contentfuloptions__SpaceId="<your space ID>"
 Contentfuloptions__UsePreviewApi=false
 Contentfuloptions__MaxNumberOfRateLimitRetries=0
 ```
-test
